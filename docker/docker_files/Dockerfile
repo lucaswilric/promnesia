@@ -12,6 +12,12 @@ WORKDIR /usr/src/promnesia
 #COPY setup.py /usr/src/
 #RUN python /usr/src/setup.py #LookupError: setuptools-scm was unable to detect version for '/usr/src/promnesia'.
 
+RUN apt-get update &&  \
+    apt-get install -y \
+        fd-find        \
+    &&                 \
+    apt-get clean
+
 RUN pip install --no-cache-dir more_itertools pytz sqlalchemy cachew \
                 appdirs urlextract python-magic \
                 tzlocal \
