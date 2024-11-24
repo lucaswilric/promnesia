@@ -306,3 +306,7 @@ dmypy.json
 **/node_modules
 .idea
 .coverage*
+bin
+pyvenv.cfg
+lib64
+include/site
