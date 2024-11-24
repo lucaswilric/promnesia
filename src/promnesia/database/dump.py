@@ -7,7 +7,6 @@ from typing import Optional
 
 from more_itertools import chunked
 from sqlalchemy import (
-    Engine,
     MetaData,
     Table,
     create_engine,
@@ -16,6 +15,7 @@ from sqlalchemy import (
     func,
     select,
 )
+from sqlalchemy.engine import Engine
 from sqlalchemy.dialects import sqlite as dialect_sqlite
 
 from .. import config

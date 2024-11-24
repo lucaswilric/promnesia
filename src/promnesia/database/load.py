@@ -3,13 +3,13 @@ from __future__ import annotations
 from pathlib import Path
 
 from sqlalchemy import (
-    Engine,
     Index,
     MetaData,
     Table,
     create_engine,
     exc,
 )
+from sqlalchemy.engine import Engine
 
 from .common import DbVisit, get_columns, row_to_db_visit
 
