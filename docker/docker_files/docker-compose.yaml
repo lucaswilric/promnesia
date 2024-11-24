@@ -22,4 +22,4 @@ services:
       - ../user_data:/user_data
     environment:
       # run once every ten minutes
-      CRONTAB: "0-59/1 * * * * cd /usr/src/promnesia &&  /usr/local/bin/python -m promnesia index  --config /user_data/indexer-config.py"
+      CRONTAB: "0-59/10 * * * * cd /usr/src/promnesia &&  /usr/local/bin/python -m promnesia index  --config /user_data/indexer-config.py"
