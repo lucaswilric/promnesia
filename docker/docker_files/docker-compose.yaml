@@ -20,7 +20,8 @@ services:
     # Uncomment to enable persisent volumes
     volumes:
       - ../user_data:/user_data
-      - $HOME/Nextcloud/Logseq:/index_data/Logseq:ro
+      - $HOME/promnesia-data:/index_data:ro
+      - $HOME/.config/my:/root/.config/my:ro
     environment:
       # run once every ten minutes
       CRONTAB: "0-59/10 * * * * cd /usr/src/promnesia &&  /usr/local/bin/python -m promnesia index  --config /user_data/indexer-config.py"
