@@ -21,7 +21,10 @@ RUN apt-get update &&  \
 RUN pip install --no-cache-dir more_itertools pytz sqlalchemy cachew \
                 appdirs urlextract python-magic \
                 tzlocal \
-                logzero HPI beautifulsoup4 lxml mistletoe orgparse dataset fastapi uvicorn
+                logzero HPI beautifulsoup4 lxml mistletoe orgparse dataset fastapi uvicorn \
+                google-takeout-parser \
+                browserexport \
+                geopy
 
 EXPOSE 13131
 CMD ["python", "-m", "promnesia", "serve", "--db", "/user_data/promnesia.sqlite", "--port", "13131"]
